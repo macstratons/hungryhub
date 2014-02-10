@@ -51,38 +51,46 @@
 // --------------------------------------------------
 
 .btn-default {
-  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+  .button-variant(@btn-default-color, @brand-secondary, @btn-hover-bg, @btn-active-bg);
 }
 .btn-primary {
-  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
-}
-// Success appears as green
-.btn-success {
-  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
-}
-// Info appears as blue-green
-.btn-info {
-  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+  .button-variant(@btn-default-color, @brand-primary, @btn-primary-hover-bg, @btn-primary-active-bg);
 }
 // Warning appears as orange
 .btn-warning {
-  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+  .button-variant(@btn-default-color, @brand-warning, @btn-warning-hover-bg, @btn-warning-active-bg);
 }
 // Danger and error appear as red
 .btn-danger {
-  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+  .button-variant(@btn-default-color, @brand-danger, @btn-danger-hover-bg, @btn-danger-active-bg);
 }
-
+// Success appears as green
+.btn-success {
+  .button-variant(@btn-default-color, @brand-success, @btn-success-hover-bg, @btn-success-active-bg);
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant(@btn-default-color, @brand-info, @btn-info-hover-bg, @btn-info-active-bg);
+}
 
 // Link buttons
 // -------------------------
 
 // Make a button look and behave like a link
 .btn-link {
-  color: @link-color;
-  font-weight: normal;
+  margin: 0 10px;
+  color: @inverse;
+  font-family: @font-family-accent;
+  font-weight: @btn-font-weight;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  border-radius: 0;
+  border-radius: @border-radius-base;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition:all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &,
   &:active,
@@ -95,13 +103,14 @@
   &:hover,
   &:focus,
   &:active {
-    border-color: transparent;
+    border: 2px solid @inverse;
   }
   &:hover,
   &:focus {
-    color: @link-hover-color;
-    text-decoration: underline;
+    color: @link-color;
+    text-decoration: none;
     background-color: transparent;
+    border: 2px solid @link-color;
   }
   &[disabled],
   fieldset[disabled] & {
@@ -113,6 +122,50 @@
   }
 }
 
+.btn-inverse-link {
+  margin: 0 10px;
+  color: #fff;
+  font-family: @font-family-accent;
+  font-weight: @btn-font-weight;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border-radius: @border-radius-base;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition:all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  &,
+  &:active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: @link-color;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid @link-color;
+  }
+  &:hover,
+  &:focus {
+    color: @link-color;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid @link-color;
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
 
 // Button Sizes
 // --------------------------------------------------

@@ -16,41 +16,41 @@
 @coal-black:	#2a2a2a;
 @inverse:		#fff;
 
-@turquoise:     			#1abc9c;
-@green-sea:     			#16a085;
+@turquoise:     #1abc9c;
+@green-sea:     #16a085;
 
-@emerald:      				#2ecc71;
-@nephritis:     			#27ae60;
+@emerald:      	#2ecc71;
+@nephritis:     #27ae60;
 
-@peter-river:   			#3498db;
-@belize-hole:   			#2980b9;
+@peter-river:   #3498db;
+@belize-hole:   #2980b9;
 
-@amethyst:      			#9b59b6;
-@wisteria:      			#8e44ad;
+@amethyst:      #9b59b6;
+@wisteria:      #8e44ad;
 
-@wet-asphalt:   			#34495e;
-@midnight-blue: 			#2c3e50;
+@wet-asphalt:   #34495e;
+@midnight-blue: #2c3e50;
 
-@sun-flower:    			#f1c40f;
-@orange:        			#f39c12;
+@sun-flower:    #f1c40f;
+@orange:        #f39c12;
 
-@carrot:        			#e67e22;
-@pumpkin:       			#d35400;
+@carrot:        #e67e22;
+@pumpkin:       #d35400;
 
-@alizarin:      			#e74c3c;
-@pomegranate:   			#c0392b;
+@alizarin:      #e74c3c;
+@pomegranate:   #c0392b;
 
-@clouds:        			#ecf0f1;
-@silver:        			#bdc3c7;
+@clouds:        #ecf0f1;
+@silver:        #bdc3c7;
 
-@concrete:      			#95a5a6;
-@asbestos:      			#7f8c8d;
+@concrete:      #95a5a6;
+@asbestos:      #7f8c8d;
 
-@gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 60%);   // #999
-@gray-lighter:           lighten(#000, 93.5%); // #eee
+@gray-darker:           lighten(#000, 13.5%); // #222
+@gray-dark:             lighten(#000, 20%);   // #333
+@gray:                  lighten(#000, 33.5%); // #555
+@gray-light:            lighten(#000, 60%);   // #999
+@gray-lighter:          lighten(#000, 93.5%); // #eee
 
 @brand-primary:         @reddish;
 @brand-secondary:       @coal-black;
@@ -104,7 +104,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    300;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -115,7 +115,7 @@
 
 @icon-font-path:          "../fonts/";
 @icon-font-name:          "glyphicons-halflings-regular";
-@icon-font-svg-id:				"glyphicons_halflingsregular";
+@icon-font-svg-id:		  "glyphicons_halflingsregular";
 
 //== Components
 //
@@ -151,6 +151,11 @@
 @caret-width-large:         5px;
 
 
+//== COMPONENT VARIABLES
+// --------------------------------------------------
+@component-font-size-base: ceil(@font-size-base * 0.833); // ~15px
+
+
 //== Tables
 //
 //## Customizes the `.table` component with basic values, each used across all table variations.
@@ -175,31 +180,54 @@
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
+@btn-font-size-base: 			@component-font-size-base;
+@btn-font-size-xs:	       		ceil(@component-font-size-base * 0.80);   // ~12px
+@btn-font-size-sm:	       		floor(@component-font-size-base * 0.867); // ~13px
+@btn-font-size-lg:	       		ceil(@component-font-size-base * 1.133);  // ~17px
+@btn-font-size-hg:	       		floor(@component-font-size-base * 1.467); // ~22px
 
-@btn-font-weight:                normal;
+@btn-line-height-base:					1.4; 	// ~21px
+@btn-line-height-hg:					1.227; // ~27px
+@btn-line-height-lg:					1.471; // ~25px
+@btn-line-height-sm:					1.385; // ~16px
+@btn-line-height-xs:					1.083; // ~13px
 
-@btn-default-color:              #333;
-@btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-font-weight:                900;
 
-@btn-primary-color:              #fff;
+@btn-default-color:              @inverse;
+@btn-default-bg:                 @brand-secondary;
+@btn-hover-bg:			 		 mix(@brand-secondary, white, 80%);
+@btn-active-bg:			 		 mix(@brand-secondary, black, 85%);
+@btn-default-border:             darken(@btn-default-bg, 5%);
+
+@btn-primary-color:              @inverse;
 @btn-primary-bg:                 @brand-primary;
+@btn-primary-hover-bg:			 mix(@brand-primary, white, 80%);
+@btn-primary-active-bg:			 mix(@brand-primary, black, 85%);
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
 
-@btn-success-color:              #fff;
+@btn-success-color:              @inverse;
 @btn-success-bg:                 @brand-success;
+@btn-success-hover-bg:			 mix(@brand-success, white, 80%);
+@btn-success-active-bg:			 mix(@brand-success, black, 85%);
 @btn-success-border:             darken(@btn-success-bg, 5%);
 
-@btn-info-color:                 #fff;
+@btn-info-color:                 @inverse;
 @btn-info-bg:                    @brand-info;
+@btn-info-hover-bg:			 	 mix(@brand-success, white, 80%);
+@btn-info-active-bg:			 mix(@brand-success, black, 85%);
 @btn-info-border:                darken(@btn-info-bg, 5%);
 
-@btn-warning-color:              #fff;
+@btn-warning-color:              @inverse;
 @btn-warning-bg:                 @brand-warning;
+@btn-warning-hover-bg:			 mix(@brand-success, white, 80%);
+@btn-warning-active-bg:			 mix(@brand-success, black, 85%);
 @btn-warning-border:             darken(@btn-warning-bg, 5%);
 
-@btn-danger-color:               #fff;
+@btn-danger-color:               @inverse;
 @btn-danger-bg:                  @brand-danger;
+@btn-danger-hover-bg:			 mix(@brand-success, white, 80%);
+@btn-danger-active-bg:			 mix(@brand-success, black, 85%);
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
 
 @btn-link-disabled-color:        @gray-light;
@@ -256,11 +284,11 @@
 @dropdown-divider-bg:            #e5e5e5;
 
 //** Dropdown link text color.
-@dropdown-link-color:            @gray-dark;
+@dropdown-link-color:            @inverse;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      darken(@gray-dark, 5%);
+@dropdown-link-hover-color:      @brand-primary;
 //** Hover background for dropdown links.
-@dropdown-link-hover-bg:         #f5f5f5;
+@dropdown-link-hover-bg:         transparent;
 
 //** Active dropdown menu item text color.
 @dropdown-link-active-color:     @component-active-color;
@@ -337,7 +365,7 @@
 @grid-gutter-width:         30px;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
-@grid-float-breakpoint:     @screen-sm-min;
+@grid-float-breakpoint:     @screen-md-max;
 //** Point at which the navbar begins collapsing.
 @grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
 
@@ -345,25 +373,27 @@
 //== Navbar
 //
 //##
+@navbar-link-space:    20px;
+@navbar-sublink-space: 9px;
 
 // Basics of a navbar
-@navbar-height:                    50px;
+@navbar-height:                    80px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
-@navbar-collapse-max-height:       340px;
+@navbar-collapse-max-height:       800px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
+@navbar-default-color:             @inverse;
+@navbar-default-bg:                @coal-black;
 @navbar-default-border:            darken(@navbar-default-bg, 6.5%);
 
 // Navbar links
-@navbar-default-link-color:                #777;
-@navbar-default-link-hover-color:          #333;
+@navbar-default-link-color:                @inverse;
+@navbar-default-link-hover-color:          @link-color;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
-@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-active-color:         @link-color;
+@navbar-default-link-active-bg:            transparent;
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;
 
@@ -373,9 +403,9 @@
 @navbar-default-brand-hover-bg:            transparent;
 
 // Navbar toggle
-@navbar-default-toggle-hover-bg:           #ddd;
-@navbar-default-toggle-icon-bar-bg:        #888;
-@navbar-default-toggle-border-color:       #ddd;
+@navbar-default-toggle-hover-bg:           @link-color;
+@navbar-default-toggle-icon-bar-bg:        @inverse;
+@navbar-default-toggle-border-color:       @inverse;
 
 
 // Inverted navbar
@@ -418,13 +448,13 @@
 @nav-open-link-hover-color:                 #fff;
 
 //== Tabs
-@nav-tabs-border-color:                     #ddd;
+@nav-tabs-border-color:                     @brand-primary;
 
-@nav-tabs-link-hover-border-color:          @gray-lighter;
+@nav-tabs-link-hover-border-color:          @brand-primary;
 
-@nav-tabs-active-link-hover-bg:             @body-bg;
-@nav-tabs-active-link-hover-color:          @gray;
-@nav-tabs-active-link-hover-border-color:   #ddd;
+@nav-tabs-active-link-hover-bg:             @brand-primary;
+@nav-tabs-active-link-hover-color:          @inverse;
+@nav-tabs-active-link-hover-border-color:   @brand-primary;
 
 @nav-tabs-justified-link-border-color:            #ddd;
 @nav-tabs-justified-active-link-border-color:     @body-bg;

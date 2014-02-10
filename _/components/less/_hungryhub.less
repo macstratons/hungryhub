@@ -1,0 +1,531 @@
+// Loading config with variables (changing them leads to changing a color scheme)
+@import "variables";
+
+//
+// Default CSS
+// --------------------------------------------------
+body {
+  font-family: @font-family-base;
+  margin-top: 80px;
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  /*-webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;*/
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition:all 0.2s ease;
+  transition: all 0.2s ease;
+  font-family: @font-family-base;
+}
+
+//
+// Navbar
+// --------------------------------------------------
+.navbar-brand {
+
+}
+
+#restaurants-menu {
+	padding: 0;
+}
+
+#free-text-search {
+	margin-left: 60px;
+	padding-left: 0;
+
+	@media (max-width: @screen-md-max) {
+    margin: 0;
+    float: left;
+    width: 100%;
+	}
+}
+
+.navbar-nav {
+  @media (max-width: @screen-lg-desktop) {
+    margin: 0 5px 0;
+    #btn-login, #btn-signup {
+      width: 95%;
+      height: 44px;
+    }
+  }
+}
+
+//
+// Carousel
+// --------------------------------------------------
+/* Half Page Height Carousel Customization */
+.carousel {
+  height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+  height: 100%;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+//
+// Advance Search Box
+// --------------------------------------------------
+.position-absolute {
+  position: absolute;
+  z-index: 10;
+}
+
+.alpha80 {
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(0, 0, 0) transparent;
+  /* RGBa with 0.6 opacity */
+  background: rgba(0, 0, 0, 0.8);
+  /* For IE 5.5 - 7*/
+  //filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  /* These three lines are for transparency in all browsers. */
+  /*
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  */
+}
+
+.rounded-corners {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+}
+
+#byLocation, #byName {
+  // Default navbar search box styling
+  .navbar-form {
+    margin: 5px 0;
+    //padding: 0 (@navbar-link-space - 15) 0 @navbar-link-space;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+    .form-control {
+      background-color: @inverse;
+      font-family: @font-family-base;
+      font-weight: 300;
+      font-style: italic;
+      //font-size: @component-font-size-base; // ~15px
+      font-size: ceil(@font-size-base * 0.933);
+      word-spacing: 0.1em;
+      //color: mix(@brand-secondary, white, 85%);
+      //.placeholder(mix(@brand-secondary, white, 45%));
+      border-radius: 4px;
+      border: 2px solid transparent;
+    }
+    .form-control:focus {
+      //border: 2px solid @brand-primary;
+    }
+    .input-group-btn .btn {
+      border: 0px solid transparent;
+      color: mix(@brand-primary, white, 0%);
+      //font-size: 15px;
+    }
+  }
+
+  .left-inner-addon {
+    position: relative;
+  }
+  .left-inner-addon input {
+      padding-left: 30px;    
+  }
+  .left-inner-addon i {
+      position: absolute;
+      padding: 10px 12px;
+      pointer-events: none;
+  }
+}
+
+#advanceSearchBox {
+  overflow: visible;
+  top: 19%;
+  margin-left: 70px;
+  padding: 10px 25px;
+  width: 520px;
+  min-height: 300px;
+
+  @media (max-width: @screen-sm-max) {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+#advanceSearchBox h3 {
+  //margin: 0 0 10px 5px;
+  color: @inverse;
+  letter-spacing: 1px;
+}
+
+#advanceSearchBox .col-md-12 {
+  padding: 0;
+}
+
+#advanceSearchBox input[type='submit'] {
+  border: none;
+}
+
+#advanceSearchBox .nav-tabs {
+  margin: 10px 0;
+}
+
+#advanceSearchBox .nav-pills > li > a {
+  margin: 10px 15px 20px 0;
+  font-family: @font-family-accent;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: @inverse;
+  background: transparent;
+  border: 2px solid @inverse;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+#advanceSearchBox .nav-pills > li > a:hover {
+  background: transparent;
+  border: 2px solid @brand-primary;
+}
+
+#advanceSearchBox .nav-pills > li.active > a {
+  background: @brand-primary;
+  border: 2px solid @brand-primary;
+}
+
+#advanceSearchBox .navbar-form {
+  width: auto;
+}
+
+#advanceSearchBox .advanceSearch {
+  margin: 25px 0 5px;
+  padding: 0;
+  overflow: visible;
+}
+
+#advanceSearchBox #date-picker {
+  padding: 0 20px 0 0;
+
+  @media (max-width: @screen-sm-max) {
+    padding: 0 0 30px 0;
+  }
+}
+
+#advanceSearchBox #time-picker {
+    padding: 0 0 0 20px;
+
+    @media (max-width: @screen-sm-max) {
+    padding: 0 0 30px 0;
+  }
+}
+
+#advanceSearchBox #cover-picker {
+    padding: 0 0 0 40px;
+
+    @media (max-width: @screen-sm-max) {
+    padding: 0 0 30px 0;
+  }
+}
+
+#advanceSearchBox #date-picker input,
+#advanceSearchBox #time-picker input,
+#advanceSearchBox #cover-picker input {
+  width: 100%;
+}
+
+#advanceSearchBox .advanceSearch > div {
+  float: left;
+
+  @media (max-width: @screen-sm-max) {
+    width: 100%;
+  }
+}
+
+#advanceSearchBox .advanceSearch > div > i {
+  //width: 1.9em;
+  margin-right: 10px;
+  color: @inverse;
+  font-size: 20px;
+  position: relative;
+}
+
+#advanceSearchBox .advanceSearch input[type='text'] {
+  margin-right: 0px;
+  padding: 4px 10px;
+  width: 20%;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -khtml-border-radius: 4px 0 0 4px;
+  -o-border-radius: 4px 0 0 4px;
+}
+
+#advanceSearchBox .advanceSearch select {
+  border-radius: 4px;
+  border: none;
+  padding: 4px;
+}
+
+#advanceSearchBox .advanceSearchFooter {
+  margin: 50px 0 20px 0; 
+}
+
+#advanceSearchBox .advanceSearchFooter a:hover {
+  color: mix(@brand-primary, white, 70%);
+  text-decoration: none;
+}
+
+#advanceSearchBox .advanceSearchFooter h6 {
+  margin: 15px 40px 0 0;
+  float: left;
+  font-family: @font-family-base;
+  font-size: 11px;
+  color: @inverse;
+  letter-spacing: 1px;
+}
+
+#advanceSearchBox .advanceSearchFooter button[type='submit'] {
+  height: 44px;
+  font-family: @font-family-accent;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: @inverse;
+  background: @brand-primary;
+  border: 2px solid @brand-primary;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition:all 0.2s ease;
+  transition: all 0.2s ease;
+
+  @media (max-width: @screen-sm-max) {
+    margin: 30px 0 10px 0;
+    width: 100%;
+  }
+}
+
+#advanceSearchBox .advanceSearchFooter button[type='submit']:hover {
+  background: transparent;
+  border: 2px solid @brand-primary;
+  color: @brand-primary;
+}
+
+//
+// Content
+// --------------------------------------------------
+#featured-header h2 {
+  margin: 40px 0;
+
+  @media (max-width: @screen-sm-max) {
+    margin: 20px 0;
+    font-size: @font-size-h3;
+  }
+}
+
+#featured-header .nav-tabs > li {
+  font-family: @font-family-accent;
+  font-weight: 700;
+  font-size: @font-size-base;
+  text-transform: uppercase;
+  line-height: 20px;
+
+  @media (min-width: 0px) and (max-width: @screen-phone) {
+    float: none;
+    clear: both;
+    width: 100%;
+    margin: 0 0 15px;
+
+    a {
+      border-radius: 4px;
+    }
+  }
+}
+
+#featured hr {
+  display: block; height: 1px;
+  border: 0; 
+  border-top: 1px solid #ddd;
+  margin: 1em 0; 
+  padding: 0;
+}
+
+.media-list {
+  margin: 30px 0;
+}
+
+.media-body .btn {
+  float: right;
+  font-family: @font-family-accent;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#btn-book {
+  padding: 0;
+}
+
+.media-body .star {
+  float: left;
+  margin-right: 20px; 
+}
+
+.media-heading a {
+  color: @brand-secondary;
+  font-family: @font-family-base;
+  font-weight: 400;
+}
+
+.media-heading a:hover {
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+.red {
+  color: @brand-primary;
+}
+
+//
+// Aside
+// --------------------------------------------------
+.aside {
+  margin: 40px 0;
+}
+
+//
+// Footer
+// --------------------------------------------------
+.footer {
+  background: @brand-secondary;
+}
+
+.footer a {
+  color: @gray-light;
+}
+
+.footer a:hover {
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+.footer .navbar {
+  margin: 0;
+  border-bottom: 1px solid #202020;
+  width: 550px;
+  margin: 0 auto;
+
+  @media (min-width: 0px) and (max-width: @screen-md-max) {
+    border: 0;
+    width: 100%
+  }
+}
+
+.footer .navbar .navbar-toggle {
+  border-color: @inverse;
+}
+
+.footer .navbar .navbar-toggle .icon-bar {
+  background-color: @inverse;
+}
+
+.footer .navbar-nav > li > a {
+  color: @gray-light;
+  font-family: @font-family-accent;
+  font-size: @font-size-h6;
+}
+
+.footer .navbar-nav > li > a:hover {
+  background: transparent;
+  color: @brand-primary;
+}
+
+.footer .bottom {
+  border-top: 1px solid #3e3e3e;
+  padding-top: 20px;
+}
+
+.footer div.text {
+  float: left;
+  width: 850px;
+  //margin: 0 auto;
+  //width: 100%;
+
+  @media (max-width: @screen-md-max) {
+    width: 100%;
+    clear: both;
+  }
+}
+
+.footer .label {
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: block;
+  color: @gray-light;
+  background: transparent;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+
+  @media (max-width: @screen-md-max) {
+    text-align: left;
+  }
+
+  @media (max-width: @screen-tablet) {
+    text-align: left;
+    white-space: inherit;
+    line-height: 1.5em;
+  }
+}
+
+.footer .social {
+  float: left;
+  margin-right: 20px;
+}
+
+.footer .languages {
+  float: right;
+  margin-left: 20px;
+}
+
+.footer .languages a {
+  font-size: 12px;
+}
+
+//
+// Media Queries
+// --------------------------------------------------
+@media (min-width: 0) and (max-width: @screen-md-max) {
+  .footer .pull-right {
+    float: left !important;
+    margin: 0 10px 15px;
+  }
+}

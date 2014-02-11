@@ -16,21 +16,17 @@ body {
 a {
   /*-webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;*/
+  font-family: @font-family-base;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   -ms-transition:all 0.2s ease;
   transition: all 0.2s ease;
-  font-family: @font-family-base;
 }
 
 //
 // Navbar
 // --------------------------------------------------
-.navbar-brand {
-
-}
-
 #restaurants-menu {
 	padding: 0;
 }
@@ -44,6 +40,10 @@ a {
     float: left;
     width: 100%;
 	}
+}
+
+.navbar-brand {
+  margin-left: 0;
 }
 
 .navbar-nav {
@@ -371,12 +371,32 @@ a {
   }
 }
 
-#featured hr {
+hr {
   display: block; height: 1px;
   border: 0; 
   border-top: 1px solid #ddd;
   margin: 1em 0; 
   padding: 0;
+}
+
+#hh-result h2,
+#hh-restaurant-info h2 {
+  margin-top: 50px;
+  font-weight: 500;
+
+  @media (max-width: @screen-sm-max) {
+    margin-top: 30px;
+    font-size: @font-size-h3;
+  }
+}
+
+#hh-result h3 {
+  margin-bottom: 50px;
+
+  @media (max-width: @screen-sm-max) {
+    margin-bottom: 30px;
+    font-size: @font-size-h4;
+  }
 }
 
 .media-list {
@@ -385,6 +405,8 @@ a {
 
 .media-body .btn {
   float: right;
+  margin-bottom: 10px;
+  width: 100%;
   font-family: @font-family-accent;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -414,16 +436,177 @@ a {
   color: @brand-primary;
 }
 
+.navigation {
+  text-align: center;
+}
+
+.pagination > li > a {
+  font-size: 12px;
+  color: @gray;
+}
+
+.pagination > li > a:active {
+  color: @brand-primary;
+  background: #ebebeb;
+  border-color: @brand-primary;
+}
+
 //
 // Aside
 // --------------------------------------------------
+#aside h2 {
+  font-weight: 300;
+}
+
+#aside h4 {
+  font-weight: 400;
+}
+
 .aside {
-  margin: 40px 0;
+  margin: 20px 0;
+}
+
+//
+// Filter Options
+// --------------------------------------------------
+#aside .filter {
+  margin: 20px 0;
+  background: @inverse;
+  border: 1px solid #ddd;
+  padding: 10px 20px 10px;
+  overflow: hidden;
+}
+
+#aside .filter .star div,
+#aside .filter .price div,
+#aside .filter .credit div {
+  margin-bottom: 15px;
+}
+
+#aside .filter .credit div {
+  float: left;
+  width: 45%;
+  height: 30px;
+  margin: 10px 10px 10px 0;
+}
+
+//
+// Cover Photo
+// --------------------------------------------------
+.slideshow {
+  margin: 20px 0;
+}
+
+.slideshow .thumbnails {
+  margin-top: 20px;
+}
+
+.slideshow .thumbnails .thumbnail {
+  float: left;
+  background: #ccc;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+.slideshow .thumbnails .thumbnail:first-child {
+  margin-left: 0;
+}
+
+.storyContent,
+.diner-review {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  background: @inverse;
+}
+
+.storyContent .header {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.storyContent .content,
+.diner-review {
+  overflow: auto;
+  padding: 20px;
+}
+
+.storyContent .content p {
+  padding: 10px 0;
+}
+
+.comment {
+  margin-top: 20px;
+}
+
+.comment textarea {
+  padding: 10px;
+  width: 100%;
+  border-radius: 3px;
+  color: @gray;
+  border-color: @gray-lighter;
+}
+
+.comment button[type='submit'] {
+  background: @brand-secondary;
+  color: @inverse;
+  font-family: @font-family-accent;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.comment button[type='submit']:hover {
+  background: @brand-primary;
+}
+
+.comment select {
+  margin: 20px 20px 0 0;
+  border-radius: 10px;
+  color: @gray-light;
+  border-color: @gray-light;
+}
+
+.booknow {
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  background: @inverse;
+  border: 1px solid #ccc;
+}
+
+.booknow .btn {
+  margin-top: 20px;
+  padding: 5px 5%;
+  width: 100%;
+  background: @brand-secondary;
+  color: @inverse;
+  font-family: @font-family-accent;
+  font-weight: 900;
+  font-size: @font-size-h3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.booknow .btn:hover {
+  background: @brand-primary;
+}
+
+div.booknow .btn:first-child {
+  margin-top:0;
 }
 
 //
 // Footer
 // --------------------------------------------------
+#hh-footer {
+  margin-top: 40px;
+
+  @media (min-width: 0px) and (max-width: @screen-md-max) {
+    margin-top: 0;
+  }
+}
+
 .footer {
   background: @brand-secondary;
 }

@@ -1,0 +1,126 @@
+<div class="clearfix">
+  <div class="col-md-12">
+    <div class="reservation-container">
+      <h3>Make a free restaurant reservation</h3>
+    </div>
+    <!-- reservation-container end -->
+  </div>
+  <!-- ./col-md-12 -->
+</div>
+<!-- ./clerfix -->
+
+<!-- Nav tabs -->
+<ul class="nav nav-pills">
+  <li class="active"><a href="#byLocation" data-toggle="tab">by location & cuisine</a></li>
+  <li><a href="#byName" data-toggle="tab">by restaurant name</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Search By Location / Cuisine -->
+  <div class="tab-pane fade in active" id="byLocation">
+    <form class="navbar-form" action="search-criterion.html" method="get">
+      <!-- Restaurant Search -->
+      <div class="left-inner-addon">
+        <i class="fa fa-search"></i>
+        <input type="text" class="form-control" placeholder="Search by restaurant name" id="search-term" name="search-loction">
+      </div>
+
+      <!-- Criteria Search -->
+      <div class="advanceSearch col-lg-12">
+        <!-- Date Picker -->
+        <div class="col-sm-12 col-md-4" id="date-picker">
+          <div class="input-group input-group-sm date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+            <input type="text" class="form-control" value="dd-mm-yyyy" id="datepicker" name="datepicker">
+            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+          </div>
+          <script type="text/javascript">$('#datepicker').datepicker();</script>
+        </div>
+
+        <!-- Time Picker -->
+        <div class="col-sm-12 col-md-4" id="time-picker">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" id="timepicker" name="timepicker">
+            <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
+          </div>
+          <script type="text/javascript">
+            $('#timepicker').timepicker({showMeridian: false});
+          </script>
+        </div>
+
+        <!-- Cover Picker -->
+        <div class="col-sm-12 col-md-4" id="cover-picker">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" id="people" name="people">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- Criteria Search End -->
+
+      <div class="advanceSearchFooter clearfix">
+        <hr>
+        <h6>Not ready to reserve? 
+          <a href="#">See all Bangkok restaurants&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+        </h6>
+        <!--<input type="submit" class="btn btn-primary" value="find table">-->
+        <button type="submit" class="btn btn-primary">Find table</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Search By Name -->
+  <div class="tab-pane fade" id="byName">
+    <form class="navbar-form" action="search-criterion.html" method="get">
+      <!-- Restaurant Search -->
+      <div class="left-inner-addon">
+        <i class="fa fa-search"></i>
+        <input type="text" class="form-control" placeholder="Search by restaurant name" id="search-term" name="search-loction">
+      </div>
+
+      <!-- Criteria Search -->
+      <div class="advanceSearch col-lg-12">
+        <!-- Date Picker -->
+        <div class="col-sm-12 col-md-4" id="date-picker">
+          <div class="input-group input-group-sm" id="datepicker" name="datepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+            <input type="text" class="form-control" readonly="" value="dd-mm-yyyy">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-primary"><i class="fa fa-calendar"></i></button>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Time Picker -->
+        <div class="col-sm-12 col-md-4" id="time-picker" id="timepicker1" name="timepicker1">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" readonly="">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-primary"><i class="fa fa-clock-o"></i></button>
+            </span>
+          </div>
+        </div>
+
+        <!-- Cover Picker -->
+        <div class="col-sm-12 col-md-4" id="cover-picker" id="people" name="people">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-primary"><i class="fa fa-user"></i></button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- Criteria Search End -->
+
+      <div class="advanceSearchFooter clearfix">
+        <hr>
+        <h6>Not ready to reserve? 
+          <a href="#">See all Bangkok restaurants&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+        </h6>
+        <!--<input type="submit" class="btn btn-primary" value="find table">-->
+        <button type="submit" class="btn btn-primary">Find table</button>
+      </div>
+    </form>
+  </div>
+</div>

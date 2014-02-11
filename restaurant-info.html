@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Hungry Hub -- Restaurant Detail</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="_/css/bootstrap.css" rel="stylesheet">
+    <link href="_/css/hungryhub.css" rel="stylesheet">
+    <link href="images/logotype/favicon.png" rel="shortcut icon" >
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+    <script src="_/js/bootstrap.js"></script>
+    <script src="_/js/hungryhub.js"></script>
+  </head>
+  
+  <body id="info">
+    <!-- NAV BAR -->
+    <nav id="hh-header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <script type="text/javascript">
+        $("#hh-header").load("_/components/html/header.html", function (respond, status, xhr) {
+          if (status == "error") {
+            var msg = "Error has occurred: ";
+            $(this).html(msg + xhr.status + " " + xhr.statusText);
+          }
+        });
+      </script>
+    </nav>
+
+    <!-- CONTENT -->
+    <div id="hh-restaurant-info" class="container">
+      <div class="row">
+        <!-- Main Content -->
+        <div class="col-sm-8 col-lg-8">
+          <h2>The Garret Secret Bistro</h2>
+          <!-- Cover Photos -->
+          <div class="slideshow">
+            <img src="http://placehold.it/741x270&text=Cover Photo" class="img-responsive" style="width: 100%; height: auto;">
+            <div class="thumbnails hidden-xs">
+              <div class="thumbnail"><a href="#"><img src="http://placehold.it/100x100&text=Photo 1"></a></div>
+              <div class="thumbnail"><a href="#"><img src="http://placehold.it/100x100&text=Photo 2"></a></div>
+              <div class="thumbnail"><a href="#"><img src="http://placehold.it/100x100&text=Photo 3"></a></div>
+              <div class="thumbnail"><a href="#"><img src="http://placehold.it/100x100&text=Photo 4"></a></div>
+              <div class="thumbnail"><a href="#"></a></div>
+              <div class="thumbnail"><a href="#"></a></div>
+            </div>
+          </div>
+          
+          <!-- Nav tabs -->
+          <div id="featured-header" class="clearfix">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#information" data-toggle="tab">Information</a></li>
+              <li><a href="#review" data-toggle="tab">Diner Reviews</a></li>
+            </ul>
+          </div>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane fade in active" id="information">
+              <div class="storyContent">
+                <div class="header">
+                <p>
+                    <i class="fa fa-star red"></i>
+                    <i class="fa fa-star red"></i>
+                    <i class="fa fa-star red"></i>
+                    <i class="fa fa-star red"></i>
+                    <i class="fa fa-star red"></i>
+                </p>
+                <p><i class="fa fa-tags">&nbsp;Fusion, Bar / Lounge, Thai Cuisine</i></p>    
+
+                </div>
+
+                <div class="content">
+                  <div class="body">
+                    <p><strong>Address :</strong> 99/99 Sukhumvit 63 (Ekkamai Soi 7) Klongton-Nua, Wattana Bangkok, 10110</p>
+                    <div class="col-sm-6 col-lg-6">
+                      <p><strong>Price :</strong> $$$ (1,000 - 3,00 Baht)</p>
+                      <p><strong>Location :</strong> Thonglor - Ekkamai</p>
+                      <p><strong>Website :</strong> garretbistro.com</p>
+                      <p><strong>Telephone :</strong> +66(0)2 556-5555</p>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                      <p><strong>Parking :</strong> Valet</p>
+                      <p><strong>Drinking :</strong> Alcohol, Beer, Cocktails, Wine</p>
+                      <p><strong>Payment :</strong> AMEX, MASTER Card / VISA</p>
+                      <p><strong>Misc :</strong> Casual Dress, Child Family, Formal Dress</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="review">
+              <div class="comment">
+                <form role="form">
+                  <div class="form-group">
+                    <textarea placeholder="Write a review"></textarea>
+                    <select class="pull-left">
+                      <option>- select rating -</option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Review</button>
+                </form>
+              </div>
+
+              <div class="diner-review">
+                <ul class="media-list">
+                  <li class="media">
+                    <!-- Photo -->
+                    <a class="pull-left" href="#">
+                      <img class="media-object img-responsive" src="http://placehold.it/64x64">
+                    </a>
+                    <!-- Diner's Review -->
+                    <div class="media-body">
+                      <div class="col-sm-12 col-lg-12">
+                        <!-- Stars -->
+                        <p>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                        </p>
+                        <p><a href="#">Belle</a>&nbsp;dined on 10/11/2013</p>
+                        <p>"loved everything about this place. the food is awesome the music was perfect,
+                        ambiance was lively. if you're looking for."</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- REVIEW 1 END -->
+                <ul class="media-list">
+                  <li class="media">
+                    <!-- Photo -->
+                    <a class="pull-left" href="#">
+                      <img class="media-object img-responsive" src="http://placehold.it/64x64">
+                    </a>
+                    <!-- Diner's Review -->
+                    <div class="media-body">
+                      <div class="col-sm-12 col-lg-12">
+                        <!-- Stars -->
+                        <p>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                        </p>
+                        <p><a href="#">Matthew</a>&nbsp;dined on 09/11/2013</p>
+                        <p>"The wait was too long and the food was just ok, but the cocktails were great.
+                        This is a scenery restaurant, being us"</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- REVIEW 2 END -->
+                <ul class="media-list">
+                  <li class="media">
+                    <!-- Photo -->
+                    <a class="pull-left" href="#">
+                      <img class="media-object img-responsive" src="http://placehold.it/64x64">
+                    </a>
+                    <!-- Diner's Review -->
+                    <div class="media-body">
+                      <div class="col-sm-12 col-lg-12">
+                        <!-- Stars -->
+                        <p>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                        </p>
+                        <p><a href="#">Surasit</a>&nbsp;dined on 07/11/2013</p>
+                        <p>"Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis."</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- REVIEW 3 END -->
+                <ul class="media-list">
+                  <li class="media">
+                    <!-- Photo -->
+                    <a class="pull-left" href="#">
+                      <img class="media-object img-responsive" src="http://placehold.it/64x64">
+                    </a>
+                    <!-- Diner's Review -->
+                    <div class="media-body">
+                      <div class="col-sm-12 col-lg-12">
+                        <!-- Stars -->
+                        <p>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                        </p>
+                        <p><a href="#">Steve</a>&nbsp;dined on 05/11/2013</p>
+                        <p>"Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis."</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- REVIEW 4 END -->
+                <ul class="media-list">
+                  <li class="media">
+                    <!-- Photo -->
+                    <a class="pull-left" href="#">
+                      <img class="media-object img-responsive" src="http://placehold.it/64x64">
+                    </a>
+                    <!-- Diner's Review -->
+                    <div class="media-body">
+                      <div class="col-sm-12 col-lg-12">
+                        <!-- Stars -->
+                        <p>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                          <i class="fa fa-star red"></i>
+                        </p>
+                        <p><a href="#">Mark</a>&nbsp;dined on 01/11/2013</p>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing"</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- REVIEW 5 END -->
+
+
+                <!-- Pagination -->
+                <div class="navigation">
+                  <ul class="pagination">
+                      <li class="disabled"><a href="#">«</a></li>
+                      <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                      <li><a href="#">»</a></li>
+                  </ul>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aside -->
+        <div id="aside" class="col-sm-12 col-lg-4">
+          <!-- Location -->
+          <h2>Location</h2>
+          <div class="aside"><img class="img-responsive" src="http://placehold.it/400x270&text=Google Map"></div>
+          
+          <!-- Booking -->
+          <h3>Book your table for today.</h3>
+          <div class="booknow">
+            <form action="#" method="post">
+              <button class="btn">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="hh-footer" class="col-md-12 footer">
+      <script type="text/javascript">
+        $("#hh-footer").load("_/components/html/footer.html", function (respond, status, xhr) {
+          if (status == "error") {
+            var msg = "Error has occurred: ";
+            $(this).html(msg + xhr.status + " " + xhr.statusText);
+          }
+        });
+      </script>
+    </div>
+
+  </body>
+</html>

@@ -17,11 +17,13 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
   </head>
   
   <body id="home">
     <!-- NAV BAR -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="hh-header">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -87,7 +89,7 @@
     </nav>
 
     <!-- CAROUSEL -->
-    <div id="carousel" class="carousel slide hidden-sm hidden-xs" data-ride="carousel">
+    <div id="carousel" class="carousel slide hidden-sm hidden-xs" data-ride="carousel" id="hh-carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -140,7 +142,7 @@
     </div>
 
     <!-- ADVANCE SEARCH BOX -->
-    <div id="advanceSearchBox" class="clearfix position-absolute alpha80 rounded-corners">
+    <div id="advanceSearchBox" class="clearfix position-absolute alpha80 rounded-corners" id="hh-searchbox">
       <div class="clearfix">
         <div class="col-md-12">
           <div class="reservation-container">
@@ -266,7 +268,7 @@
     </div>
 
     <!-- CONTENT -->
-    <div class="container">
+    <div class="container" id="hh-featured-restaurant">
       <div class="row">
         <!-- Featured Restaurant -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8" id="featured-header">
@@ -801,7 +803,7 @@
     </div>
 
     <!-- FOOTER -->
-    <div class="col-md-12 footer">
+    <div class="col-md-12 footer" id="hh-footer">
       <div class="container">
         <div class="navbar" role="navigation">
           <div class="navbar-header">

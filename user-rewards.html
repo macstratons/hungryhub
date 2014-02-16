@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Hungry Hub -- Rewards</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="_/css/bootstrap.css" rel="stylesheet">
+    <link href="_/css/hungryhub.css" rel="stylesheet">
+    <link href="images/logotype/favicon.png" rel="shortcut icon" >
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+    <script src="_/js/bootstrap.js"></script>
+    <script src="_/js/hungryhub.js"></script>
+  </head>
+  
+  <body id="hh-user-reward">
+    <!-- NAV BAR -->
+    <nav id="hh-header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <script type="text/javascript">
+        $("#hh-header").load("_/components/html/header.html", function (respond, status, xhr) {
+          if (status == "error") {
+            var msg = "Error has occurred: ";
+            $(this).html(msg + xhr.status + " " + xhr.statusText);
+          }
+        });
+      </script>
+    </nav>
+
+    <!-- CONTENT -->
+    <div id="hh-user" class="container">
+      <div class="row">
+        <h2><i class="fa fa-gear"></i>&nbsp; Settings</h2>
+        <!-- Menu -->
+        <div class="col-sm-3 col-lg-3">
+          <div class="settings-menu">
+            <ul>
+              <li><a href="user-dashboard.html"><i class="fa fa-list-ul"></i>&nbsp; Dashboard</a></li>
+              <li><a href="user-reservations.html"><i class="fa fa-file-text-o"></i>&nbsp; Reservations</a></li>
+              <li><a href="user-rewards.html" class="active"><i class="fa fa-star-o"></i>&nbsp; Rewards</a></li>
+              <li><a href="user-profile.html"><i class="fa fa-user"></i>&nbsp; Profile</a></li>
+              <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp; Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-sm-9 col-lg-9">
+          <div class="settings-panel">
+            <div class="header">
+              <h3>Rewards</h3>
+            </div>
+            <div class="content">
+              <h4>Rewards Redeemed</h4>
+              <table class="table table-striped visit-table">
+                <thead>
+                  <tr>
+                    <th>Restaurants</th>
+                    <th>Rewards</th>
+                    <th>Points</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="table-align-left">The Garret Secret Bistro</td>
+                    <td>Free welcome Nook & Cranny Beer </td>
+                    <td>5</td>
+                    <td>14/02/14</td>
+                  </tr>
+                  <tr>
+                    <td class="table-align-left">Maison Chin</td>
+                    <td>$18 Whitebait Sandwich & Drink</td>
+                    <td>5</td>
+                    <td>09/02/14</td>
+                  </tr>
+                  <tr>
+                    <td class="table-align-left">Roast Coffee & Eatery</td>
+                    <td>$10 Lavender Tea</td>
+                    <td>5</td>
+                    <td>05/02/14</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="hh-footer" class="col-md-12 footer">
+      <script type="text/javascript">
+        $("#hh-footer").load("_/components/html/footer.html", function (respond, status, xhr) {
+          if (status == "error") {
+            var msg = "Error has occurred: ";
+            $(this).html(msg + xhr.status + " " + xhr.statusText);
+          }
+        });
+      </script>
+    </div>
+
+  </body>
+</html>

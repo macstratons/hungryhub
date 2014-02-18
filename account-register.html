@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Hungry Hub -- For Your Business</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="_/css/bootstrap.css" rel="stylesheet">
+    <link href="_/css/hungryhub.css" rel="stylesheet">
+    <link href="images/logotype/favicon.png" rel="shortcut icon" >
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+    <script src="_/js/bootstrap.js"></script>
+    <script src="_/js/hungryhub.js"></script>
+  </head>
+  
+  <body id="hh-user-profile">
+    <!-- NAV BAR -->
+    <nav id="hh-header" class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <script type="text/javascript">
+        $("#hh-header").load("_/components/html/header.html", function (respond, status, xhr) {
+          if (status == "error") {
+            var msg = "Error has occurred: ";
+            $(this).html(msg + xhr.status + " " + xhr.statusText);
+          }
+        });
+      </script>
+    </nav>
+
+    <!-- BANNER -->
+    <div class="business-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- The background image is set in the custom CSS -->
+            <h1 class="tagline">An Informative Tagline Goes Here</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div id="hh-business" class="container">
+      <hr>
+
+      <div class="row">
+        <div class="col-sm-4">
+            <img class="img-circle img-responsive text-center" src="http://placehold.it/300x300">
+            <h2>Marketing Box #1</h2>
+            <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
+        </div>
+        <div class="col-sm-4">
+            <img class="img-circle img-responsive" src="http://placehold.it/300x300">
+            <h2>Marketing Box #2</h2>
+            <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        </div>
+        <div class="col-sm-4">
+            <img class="img-circle img-responsive" src="http://placehold.it/300x300">
+            <h2>Marketing Box #3</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-lg-8 col-sm-8 col-xs-12">
+          <h2>Register Your Business Now</h2>
+          <p>Here is where you will introduce visitors to the business. Make sure to use clear and informative sentences. Use appropriate keywords here to make sure search engines can find the business.</p><br>
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="inputName" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control input-lg" id="inputName" placeholder="Your Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control input-lg" id="inputEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">REGISTER &raquo;</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-12">
+          <h2>Contact Us</h2>
+          <address>
+              <strong>Appservation Co, Ltd.</strong>
+              <br>Soi Chula Payathai Road
+              <br>Bangkok 10330, Thailand
+              <br>
+          </address>
+          <address>
+              <abbr title="Phone">P:</abbr>(123) 456-7890
+              <br>
+              <abbr title="Email">E:</abbr> <a href="mailto:#">first.last@example.com</a>
+          </address>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="hh-footer" class="col-md-12 footer">
+      <script type="text/javascript">
+        $("#hh-footer").load("_/components/html/footer.html", function (respond, status, xhr) {
+          if (status == "error") {
+            var msg = "Error has occurred: ";
+            $(this).html(msg + xhr.status + " " + xhr.statusText);
+          }
+        });
+      </script>
+    </div>
+
+  </body>
+</html>

@@ -25,27 +25,336 @@ a {
 }
 
 //
+// Sign In & Sign Up
+// --------------------------------------------------
+.form-signin {
+  max-width: 330px;
+  padding: 25px;
+  margin: 0 auto;
+  background: #fff;
+  border: 2px solid @gray-lighter;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition:all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 30px;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+  color: @gray-light;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-top: 20px;
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin button[type='submit'] {
+  margin-top: 20px;
+  background: @brand-secondary;
+  color: @inverse;
+  font-family: @font-family-accent;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition:all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form-signin button[type='submit']:hover {
+  background: @brand-primary;
+}
+
+.form-signin input[type="text"].signup {
+  margin-top: 20px;
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="email"].signup,
+.form-signin input[type="password"].signup {
+  margin: -1px 0;
+  border-radius: 0;
+}
+
+.form-signin i {
+  font-size: 18px;
+}
+
+.form-signin h5.form-signin-heading {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.form-signin p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.form-signin a {
+  color: @gray-light;
+  font-weight: 300;
+}
+
+.form-signin a:hover {
+  color: @brand-primary;
+  text-decoration: none;
+}
+
+.symbol {
+  max-width: 330px;
+  margin: 20px auto;
+}
+
+.form-signin button[type='submit'].btn-facebook {
+  background: #3B5B95;
+  color: @inverse;
+  font-family: @font-family-accent;
+  font-weight: 900;
+  font-size: @font-size-h5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition:all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form-signin button[type='submit'].btn-facebook:hover {
+  background: mix(#3B5B95, white, 90%);
+}
+
+//
+// Header Image
+// --------------------------------------------------
+.header-image {
+  background: url(http://placehold.it/200x300) repeat;/* Use a tiling background image or a full width image - if you're using full width you will need to change no-repeat center center cover  */
+  background-position: top;
+  height: auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.headline {
+  padding: 120px 0;
+
+  @media (max-width: 640px) {
+  .headline {padding: 75px 0 25px 0;}
+  }
+}
+
+.headline > .container > h1 {
+  font-family: @font-family-accent;
+  font-weight: 700;
+  font-size: 130px;
+
+  @media (max-width: 1200px) {font-size: 140px;}
+  @media (max-width: 991px) {font-size: 105px;}
+  @media (max-width: 668px) {font-size: 70px;}
+  @media (max-width: 640px) {font-size: 60px;}
+}
+
+.headline > .container > h2 {
+  font-family: @font-family-accent;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 77px;
+
+  @media (max-width: 1200px) {font-size: 63px;}
+  @media (max-width: 991px) {font-size: 50px;}
+  @media (max-width: 640px) {font-size: 30px;}
+  @media (max-width: 668px) {font-size: 32px;}
+}
+
+.featurette-divider {
+  margin: 80px 0;
+
+  @media (max-width: 1200px) {margin: 50px 0;}
+  @media (max-width: 991px) {margin: 40px 0;}
+  @media (max-width: 668px) {margin: 30px 0;}
+  @media (max-width: 375px) {margin: 10px 0;}
+}
+
+.featurette {
+  overflow: hidden; 
+}
+
+.featurette-image {
+  @media (max-width: 991px) {max-width: 50%;}
+  @media (max-width: 375px) {max-width: 100%;}
+}
+
+.featurette-image.pull-left {
+  margin-right: 40px;
+
+  @media (max-width: 1200px) {margin-right: 20px;}
+  @media (max-width: 991px) {margin-right: 10px;}
+  @media (max-width: 375px) {margin-right: 0; margin-bottom: 10px}
+}
+
+.featurette-image.pull-right {
+  margin-left: 40px;
+
+  @media (max-width: 1200px) {margin-right: 20px;}
+  @media (max-width: 991px) {margin-right: 10px;}
+  @media (max-width: 375px) {margin-right: 0; margin-bottom: 10px}
+}
+
+.featurette-heading {
+  font-size: 50px;
+
+  @media (max-width: 1200px) {font-size: 35px;}
+  @media (max-width: 991px) {font-size: 30px;}
+  @media (max-width: 768px) {font-size: 25px;}
+}
+
+//
+// Business Header
+// --------------------------------------------------
+/* change the URL to a picture of your choice - the higher quality the better! */
+.business-header {
+  height: 400px;
+  background: url(http://placehold.it/1920x400) center center no-repeat;
+  background-size: cover;
+}
+
+/* adjust the color and text shadow to optimize legibility once you have an image set - you can also change the vertical positioning if desired  */
+.tagline {
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+
+#hh-business button[type='submit'] {
+  height: 44px;
+  font-family: @font-family-accent;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: @inverse;
+  background: @brand-secondary;
+  border: 0px solid @brand-primary;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition:all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#hh-business button[type='submit']:hover {
+  background: @brand-primary;
+}
+
+//
 // Navbar
 // --------------------------------------------------
-#restaurants-menu {
-	padding: 0;
-}
-
-#free-text-search {
-	margin-left: 60px;
-	padding-left: 0;
-
-	@media (max-width: @screen-md-max) {
-    margin: 0;
-    float: left;
-    width: 100%;
-	}
-}
-
 .navbar-brand {
   margin-left: 0;
 }
 
+#restaurants-menu,
+#right-navbar {
+	padding: 0;
+}
+
+#free-text-search {
+	margin: 0 10px 0 0;
+	padding: 0;
+}
+
+#free-text-search input[type='text'],
+#free-text-search button[type='submit'] {
+  @media (min-width: 0px) and (max-width: @screen-md-max) {
+    margin-top: 0;
+  } 
+}
+
+#right-navbar ul {
+  float: right;
+
+  @media (max-width: @screen-md-max) {float: none;}
+}
+
+#btn-login, 
+#btn-signup {
+  margin: 22px 10px 0 20px;
+  padding: 6px 12px;
+
+  @media (max-width: @screen-md-max) {
+    width: 50%;
+    margin: 10px auto 40px;
+    padding: 15px;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    width: 60%;
+    margin: 10px auto 30px;
+    padding: 15px;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    width: 70%;
+    margin: 10px auto 30px;
+    padding: 10px;
+  }
+}
+
+#btn-business .dropdown-menu ul > li {
+  margin-top: 22px;
+  padding: 6px 12px;
+}
+
+img#profile-photo {
+  margin: 15px 5px 0;
+}
+
+/*
 .navbar-nav {
   @media (max-width: @screen-lg-desktop) {
     margin: 0 5px 0;
@@ -54,6 +363,50 @@ a {
       height: 44px;
     }
   }
+}
+*/
+
+//
+// Custom Buttons
+// --------------------------------------------------
+/* Override base .btn styles */
+/* Apply text and background changes to three key states: default, hover, and active (click). */
+.btn-hh,
+.btn-hh:hover,
+.btn-hh:active {
+  color: white;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: @brand-secondary;
+
+  @media (max-width: @screen-md-max) {
+    margin: 10px auto 40px;
+    padding: 15px;
+    font-size: @font-size-h4;
+  }
+
+  @media (max-width: @screen-sm-max) {
+    margin: 10px auto 30px;
+    padding: 15px;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    margin: 10px auto 20px;
+    padding: 10px;
+  }
+}
+
+/* Apply the custom-colored gradients */
+/* Note: you'll need to include all the appropriate gradients for various browsers and standards. */
+.btn-hh {
+  background-repeat: repeat-x;
+  background-image: linear-gradient(top, #009ED2 0%, #007DA7 100%);
+}
+
+/* Set the hover state */
+/* An easy hover state is just to move the gradient up a small amount. Add other embellishments as you see fit. */
+.btn-hh:hover {
+  background-position: 0 -15px;
+  background-color: @brand-primary;
 }
 
 //
